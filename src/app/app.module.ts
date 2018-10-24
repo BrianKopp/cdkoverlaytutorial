@@ -14,7 +14,9 @@ import { OverlayComponent } from './overlay/overlay.component';
     BrowserModule,
     OverlayModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    OverlayComponent
+  ]
 })
 export class AppModule { }
