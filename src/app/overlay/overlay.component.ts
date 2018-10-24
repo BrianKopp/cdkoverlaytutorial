@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { OverlayService } from '../overlay.service';
 
 @Component({
   selector: 'app-overlay',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./overlay.component.css']
 })
 export class OverlayComponent implements OnInit {
+  constructor() {}
+  @Output()
+  cancel = new EventEmitter();
+  ngOnInit() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  cancelThis() {
+    this.cancel.emit();
   }
-
 }
