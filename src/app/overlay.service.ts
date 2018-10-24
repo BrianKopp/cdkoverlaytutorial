@@ -31,7 +31,7 @@ export class OverlayService {
 
   open(position: CdkOverlayOrigin) {
     const overlayConfig: AppOverlayConfig = {
-      hasBackdrop: false,
+      hasBackdrop: true,
       backdropClass: 'dark-backdrop',
       panelClass: 'apps-panel',
       height: 100,
