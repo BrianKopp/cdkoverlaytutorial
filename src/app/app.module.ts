@@ -1,3 +1,4 @@
+import { OverlayService } from './overlay.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -14,6 +15,7 @@ import { OverlayComponent } from './overlay/overlay.component';
     BrowserModule,
     OverlayModule
   ],
+  providers: [OverlayService],
   bootstrap: [AppComponent],
   entryComponents: [
     OverlayComponent
