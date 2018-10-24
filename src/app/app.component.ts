@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OverlayService } from './overlay.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private overlayService: OverlayService) {}
+
+  buttonClicked() {
+    console.log('button was clicked');
+    this.overlayService.open();
+  }
 }
